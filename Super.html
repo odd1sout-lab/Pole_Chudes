@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Поле Чудес</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<button id="correct" onclick="correct.play();">Правильно!</button>
+<script id="correct" type="text/javascript">
+	const correct = new Audio();
+	correct.src = "./pole_letter_correct.mp3";
+</script>
+<button id="incorrect" onclick="incorrect.play();">Неравильно!</button>
+<script id="incorrect" type="text/javascript">
+	const incorrect = new Audio();
+	incorrect.src = "./pole_letter_wrong.mp3";
+</script>
+<button id="prize" onclick="prize.play();">Сектор приз</button>
+<script id="prize" type="text/javascript">
+	const prize = new Audio();
+	prize.src = "./sector_priz.mp3";
+</script>
+<button id="bomzh" onclick="bomzh.play();">Банкрот((</button>
+<script id="bomzh" type="text/javascript">
+	const bomzh = new Audio();
+	bomzh.src = "./pole-chudes-bankrot.mp3";
+</script>
+<button id="zer" onclick="zer.play();">000((</button>
+<script id="zer" type="text/javascript">
+	const zer = new Audio();
+	zer.src = "./sector_zero.mp3";
+</script>
+<button id="plus" onclick="plus.play();">++))</button>
+<script id="plus" type="text/javascript">
+	const plus = new Audio();
+	plus.src = "./pole-chudes-plyus.mp3";
+</script>
+<button id="pust" onclick="pust.play();">Шкатулка -</button>
+<script id="pust" type="text/javascript">
+	const pust = new Audio();
+	pust.src = "./pustaya-shkatulka.mp3";
+</script>
+<button id="cor" onclick="cor.play();">Шкатулка +</button>
+<script id="cor" type="text/javascript">
+	const cor = new Audio();
+	cor.src = "./vernaya-shkatulka.mp3";
+</script>
+<button id="q" onclick="q.play();">Альтернатива (?)</button>
+<script id="q" type="text/javascript">
+	const q = new Audio();
+	q.src = "./1995-specialnyy-sektor.mp3";
+</script>
+<button id="win" onclick="win.play();">ПОБЕДА!</button>
+<script id="win" type="text/javascript">
+	const win = new Audio();
+	win.src = "./winner-of-tour.mp3";
+</script>
+<div class="all">
+	<!----Барабан-->
+<br>
+<br>
+<br>
+	<p>▼</p>
+	<div class="Drum">
+<script type="text/javascript">
+	document.getElementsByClassName('Drum') [0].addEventListener('click', function (e){
+		e.target.style.transform = 'rotate('+Math.random()*1000+'rad)';
+		const drum = new Audio();
+	    drum.src = "./baraban.mp3";
+	    drum.play();
+		return false;
+	})
+</script>
+</div>
+<!---Буквы-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<div class="box hidden" onclick="showLetter(this)">П</div>
+    <div class="box hidden" onclick="showLetter(this)">Л</div>
+    <div class="box hidden" onclick="showLetter(this)">Е</div>
+    <div class="box hidden" onclick="showLetter(this)">В</div>
+    <div class="box hidden" onclick="showLetter(this)">А</div>
+<div class="box hidden" onclick="showLetter(this)">Л</div>
+<div class="box hidden" onclick="showLetter(this)">Ь</div>
+<div class="box hidden" onclick="showLetter(this)">Щ</div>
+<div class="box hidden" onclick="showLetter(this)">И</div>
+<div class="box hidden" onclick="showLetter(this)">К</div>
+    <script>
+        function showLetter(element) {
+            element.classList.remove('hidden');
+        }
+    </script>
+</div>
+</div>
+<audio controls type="audio/mpeg" src="./pole-chudes-super-igra-2.mp3"></audio>
+</body>
+</html>
